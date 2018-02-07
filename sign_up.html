@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <title>FOOTPRINT</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+      <script src="javascript/footprint.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="footprint">
+
+
+      <div id='main' class="container" ng-controller="authController">
+          <h1> WELCOME TO FOOTPRINT </h1>
+          <h2>Sign up and Start your Fantistic travel!</h2>
+          <div class="btn-group btn-style" id="switch" role="group" aria-label="...">
+              <button type="button" class="btn btn-default">SIGN UP</button>
+              <button type="button" class="btn btn-default">LOG IN</button>
+          </div>
+
+          <div class="col-md-9 col-centered">
+              <form class="form-auth" ng-submit="register()">
+                  <p class="text-warning">{{message}}</p>
+                  <input type="username" ng-model="user.username" placeholder="Username" class="form-control"><br>
+                  <input type="password" ng-model="user.password" placeholder="Password" class="form-control"><br>
+                  <input type="submit" value="sign up" class="btn btn-primary" />
+                </form>
+          </div>
+      </div>
+        
+    </body>
+  </html>
